@@ -1,0 +1,4 @@
+.env
+node_modules
+privateTemplate.json
+publicTemplate.json

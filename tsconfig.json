@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "noUnusedParameters": false,
+    "noUnusedLocals": false,
+    "noImplicitAny": true
+  },
+  "compileOnSave": true,
+  "include": [ "src" ],
+  "exclude": ["*.spec.ts"]
+}
