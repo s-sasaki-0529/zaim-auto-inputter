@@ -3,10 +3,10 @@ import { Template } from './template'
 import * as dotenv from 'dotenv'
 dotenv.config()
 
-export async function createIncomes(zaim: Zaim, template: Template) {
+export async function createIncomes(zaim: Zaim, template: Template, date?: Date) {
   for (const income of template.income) {
     await zaim.createIncome({
-      date: new Date(),
+      date: date || new Date(),
       category_id: income.category_id,
       amount: income.amount,
       place: income.place,
@@ -15,10 +15,10 @@ export async function createIncomes(zaim: Zaim, template: Template) {
   }
 }
 
-export async function createPayment(zaim: Zaim, template: Template) {
+export async function createPayment(zaim: Zaim, template: Template, date?: Date) {
   for (const payment of template.payment) {
     await zaim.createPay({
-      date: new Date(),
+      date: date || new Date(),
       category_id: payment.category_id,
       genre_id: payment.genre_id,
       amount: payment.amount,
